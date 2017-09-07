@@ -19,6 +19,7 @@ public class SortingTest {
 		BubbleSort bubble = new BubbleSort();
 		SortingAlgorythm selection = new SelectionSort();
 		SortingAlgorythm insertion = new InsertionSort();
+		MergeSort merge = new MergeSort();
 
 		System.out.println("Unsorted Array: ");
 		SortingAlgorythm.printArray(testArray);
@@ -51,6 +52,13 @@ public class SortingTest {
 		SortingAlgorythm.printArray(sortedArray);
 		printRunTime(startTime, endTime);
 
+		System.out.println("Merge sort: ");
+		startTime = System.currentTimeMillis();
+		sortedArray = merge.sort(testArray);
+		endTime = System.currentTimeMillis();
+		SortingAlgorythm.printArray(sortedArray);
+		printRunTime(startTime, endTime);
+
 		// *******************************sorted*********************************
 		System.out.println("Sorted Array: ");
 		SortingAlgorythm.printArray(testArraySorted);
@@ -79,6 +87,13 @@ public class SortingTest {
 		System.out.println("Bubble sort while: ");
 		startTime = System.currentTimeMillis();
 		sortedArray = bubble.sortWithWhile(testArraySorted);
+		endTime = System.currentTimeMillis();
+		SortingAlgorythm.printArray(sortedArray);
+		printRunTime(startTime, endTime);
+
+		System.out.println("Merge sort: ");
+		startTime = System.currentTimeMillis();
+		sortedArray = merge.sort(testArraySorted);
 		endTime = System.currentTimeMillis();
 		SortingAlgorythm.printArray(sortedArray);
 		printRunTime(startTime, endTime);
